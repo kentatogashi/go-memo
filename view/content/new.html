@@ -1,0 +1,11 @@
+<html>
+  <form method="post" action="/content/new" >
+    <label>
+      Name
+      <textarea name="Content" value="{{.Content.Content}}" cols=100 rows=100 /></textarea>
+    </label>
+    <input type="submit" name="Submit" value="登録" /><br/>
+    {{.Mess}}
+  </form>
+  <a href="/content/index">back</a>
+</html>

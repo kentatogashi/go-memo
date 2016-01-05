@@ -1,0 +1,17 @@
+<style>
+  a {
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+</style>
+<html>
+<p>content index</p>
+{{range .}}
+<a href="/content/edit/{{.Id}}">{{.Content}}</a><br/>
+{{end}}
+<a href="/content/new">new</a>
+</html>
