@@ -10,8 +10,9 @@
 </style>
 <html>
 <p>content index</p>
+<a href="/content/new">新規作成</a>
 {{range .}}
-<a href="/content/edit/{{.Id}}">{{.Content}}</a><br/>
+<p>{{.UpdatedAt}}</p>
+<a href="/content/edit/{{.Id}}">{{.Content}}</a>
 {{end}}
-<a href="/content/new">new</a>
 </html>

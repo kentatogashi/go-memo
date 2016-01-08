@@ -1,0 +1,109 @@
+pass
+root:pass@/gorm?charset=utf8&parseTime=True
+2016/01/07 12:55:11.657535 Starting Goji on [::]:8000
+2016/01/07 12:55:11.677492 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000001] Started GET "/content/new" from [::1]:57829
+2016/01/07 12:55:11.679020 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000001] Returning 200 in 1.469684ms
+2016/01/07 12:55:14.551506 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000002] Started POST "/content/new" from [::1]:57829
+2016/01/07 12:55:14.596427 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000002] Returning 301 in 44.88324ms
+2016/01/07 12:55:14.598882 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000003] Started GET "/content/index" from [::1]:57829
+2016/01/07 12:55:14.631034 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000003] Returning 200 in 32.13234ms
+2016/01/07 12:55:16.106829 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000004] Started GET "/content/edit/9" from [::1]:57829
+2016/01/07 12:55:16.115334 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000004] Returning 200 in 8.476168ms
+2016/01/07 13:15:24.979744 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000005] Started POST "/content/update/9" from [::1]:58248
+2016/01/07 13:15:25.031211 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000005] Returning 301 in 51.430865ms
+2016/01/07 13:15:25.033621 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000006] Started GET "/content/index" from [::1]:58248
+2016/01/07 13:15:25.034649 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000006] Returning 200 in 1.005706ms
+2016/01/07 13:18:11.662582 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000007] Started GET "/content/edit/9" from [::1]:58248
+2016/01/07 13:18:11.671259 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000007] Returning 200 in 8.647145ms
+2016/01/07 13:21:24.081235 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000008] Started GET "/content/index" from [::1]:58248
+2016/01/07 13:21:24.090853 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000008] Returning 200 in 9.58295ms
+2016/01/07 13:21:25.770638 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000009] Started GET "/content/new" from [::1]:58248
+2016/01/07 13:21:25.778315 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000009] Returning 200 in 7.646533ms
+2016/01/07 13:22:20.997070 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000010] Started GET "/content/index" from [::1]:58248
+2016/01/07 13:22:21.007103 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000010] Returning 200 in 10.00238ms
+2016/01/07 13:22:22.042582 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000011] Started GET "/content/edit/9" from [::1]:58248
+2016/01/07 13:22:22.052556 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000011] Returning 200 in 9.94053ms
+2016/01/07 13:24:24.418866 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000012] Started GET "/content/index" from [::1]:58248
+2016/01/07 13:24:24.420651 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000012] Returning 200 in 1.751461ms
+2016/01/07 13:24:26.110547 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000013] Started GET "/content/new" from [::1]:58248
+2016/01/07 13:24:26.110855 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000013] Returning 200 in 277.265µs
+2016/01/07 13:24:31.371667 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000014] Started GET "/content/index" from [::1]:58248
+2016/01/07 13:24:31.372643 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000014] Returning 200 in 946.133µs
+2016/01/07 13:24:39.374650 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000015] Started GET "/content/edit/9" from [::1]:58248
+2016/01/07 13:24:39.376508 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000015] Returning 200 in 1.821099ms
+2016/01/07 13:25:28.320737 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000016] Started POST "/content/update/9" from [::1]:58248
+2016/01/07 13:25:28.351518 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000016] Returning 301 in 30.74246ms
+2016/01/07 13:25:28.353123 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000017] Started GET "/content/index" from [::1]:58248
+2016/01/07 13:25:28.353963 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000017] Returning 200 in 818.783µs
+2016/01/07 13:26:07.538241 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000018] Started GET "/content/edit/9" from [::1]:58248
+2016/01/07 13:26:07.547128 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000018] Returning 200 in 8.798842ms
+2016/01/07 13:37:35.530025 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000019] Started GET "/user/new" from [::1]:58697
+2016/01/07 13:37:35.530295 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000019] Returning 404 in 18.733µs
+2016/01/07 13:37:45.283161 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000020] Started GET "/content/index" from [::1]:58697
+2016/01/07 13:37:45.294481 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000020] Returning 200 in 3.161909ms
+2016/01/07 13:37:46.887728 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000021] Started GET "/content/edit/9" from [::1]:58697
+2016/01/07 13:37:46.889530 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000021] Returning 200 in 1.76974ms
+2016/01/07 14:05:19.746719 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000022] Started POST "/content/update/9" from [::1]:59883
+2016/01/07 14:05:19.780064 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000022] Returning 301 in 25.910674ms
+2016/01/07 14:05:19.783758 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000023] Started GET "/content/index" from [::1]:59883
+2016/01/07 14:05:19.784810 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000023] Returning 200 in 1.01249ms
+2016/01/07 14:05:20.982597 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000024] Started GET "/content/edit/9" from [::1]:59883
+2016/01/07 14:05:20.985599 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000024] Returning 200 in 2.933484ms
+2016/01/07 14:05:25.303672 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000025] Started GET "/content/edit/9" from [::1]:59883
+2016/01/07 14:05:25.307501 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000025] Returning 200 in 3.738505ms
+2016/01/07 14:06:15.972384 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000026] Started GET "/content/edit/9" from [::1]:59883
+2016/01/07 14:06:15.974125 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000026] Returning 200 in 1.53184ms
+2016/01/07 14:23:30.340255 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000027] Started POST "/content/update/9" from [::1]:60479
+2016/01/07 14:23:30.368535 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000027] Returning 301 in 20.751879ms
+2016/01/07 14:23:30.371328 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000028] Started GET "/content/index" from [::1]:60479
+2016/01/07 14:23:30.372418 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000028] Returning 200 in 1.068048ms
+2016/01/07 14:23:31.394362 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000029] Started GET "/content/edit/9" from [::1]:60479
+2016/01/07 14:23:31.403257 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000029] Returning 200 in 8.833665ms
+2016/01/07 14:28:06.709409 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000030] Started POST "/content/update/9" from [::1]:60479
+2016/01/07 14:28:06.743138 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000030] Returning 301 in 26.316477ms
+2016/01/07 14:28:06.745132 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000031] Started GET "/content/index" from [::1]:60479
+2016/01/07 14:28:06.746292 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000031] Returning 200 in 1.137492ms
+2016/01/07 14:28:07.954186 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000032] Started GET "/content/edit/9" from [::1]:60479
+2016/01/07 14:28:07.965347 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000032] Returning 200 in 11.130298ms
+2016/01/07 14:54:32.371726 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000033] Started POST "/content/update/9" from [::1]:61432
+2016/01/07 14:54:32.401893 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000033] Returning 301 in 22.718357ms
+2016/01/07 14:54:32.405319 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000034] Started GET "/content/index" from [::1]:61432
+2016/01/07 14:54:32.406988 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000034] Returning 200 in 1.593674ms
+2016/01/07 14:54:33.641944 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000035] Started GET "/content/edit/9" from [::1]:61432
+2016/01/07 14:54:33.651066 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000035] Returning 200 in 9.088784ms
+2016/01/07 17:37:06.336776 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000036] Started GET "/content/edit/9" from [::1]:63743
+2016/01/07 17:37:06.347716 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000036] Returning 200 in 3.435959ms
+2016/01/07 18:00:07.119471 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000037] Started GET "/content/index" from [::1]:64286
+2016/01/07 18:00:07.128237 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000037] Returning 200 in 1.357877ms
+2016/01/07 18:00:16.623068 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000038] Started GET "/content/edit/9" from [::1]:64286
+2016/01/07 18:00:16.633405 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000038] Returning 200 in 10.30882ms
+2016/01/07 18:00:38.629851 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000039] Started POST "/content/update/9" from [::1]:64286
+2016/01/07 18:00:38.647226 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000039] Returning 301 in 17.341083ms
+2016/01/07 18:00:38.649147 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000040] Started GET "/content/index" from [::1]:64286
+2016/01/07 18:00:38.650081 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000040] Returning 200 in 907.496µs
+2016/01/07 18:00:39.720420 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000041] Started GET "/content/edit/9" from [::1]:64286
+2016/01/07 18:00:39.721828 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000041] Returning 200 in 1.371751ms
+2016/01/07 19:01:55.076317 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000042] Started GET "/content/index" from [::1]:64904
+2016/01/07 19:01:55.085455 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000042] Returning 200 in 1.629655ms
+2016/01/07 19:05:23.869486 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000043] Started GET "/content/index" from [::1]:64904
+2016/01/07 19:05:23.870659 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000043] Returning 200 in 1.13863ms
+2016/01/07 19:05:24.463751 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000044] Started GET "/content/index" from [::1]:64904
+2016/01/07 19:05:24.464690 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000044] Returning 200 in 912.111µs
+2016/01/08 10:07:44.695895 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000045] Started GET "/content/edit/9" from [::1]:52987
+[MySQL] 2016/01/08 10:07:44 packets.go:118: write tcp 127.0.0.1:57828->127.0.0.1:3306: write: broken pipe
+[MySQL] 2016/01/08 10:07:44 packets.go:118: write tcp 127.0.0.1:57828->127.0.0.1:3306: write: broken pipe
+2016/01/08 10:07:44.732431 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000045] Returning 200 in 28.357408ms
+2016/01/08 10:07:51.207636 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000046] Started GET "/content/index" from [::1]:52987
+2016/01/08 10:07:51.216462 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000046] Returning 200 in 8.778137ms
+2016/01/08 10:07:52.389662 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000047] Started GET "/content/new" from [::1]:52987
+2016/01/08 10:07:52.397709 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000047] Returning 200 in 8.021294ms
+2016/01/08 10:07:55.574076 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000048] Started GET "/content/index" from [::1]:52987
+2016/01/08 10:07:55.582923 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000048] Returning 200 in 8.820948ms
+2016/01/08 10:09:52.950140 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000049] Started GET "/content/index" from [::1]:52987
+2016/01/08 10:09:52.951882 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000049] Returning 200 in 1.41302ms
+2016/01/08 10:09:56.161583 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000050] Started GET "/content/new" from [::1]:52987
+2016/01/08 10:09:56.169322 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000050] Returning 200 in 7.715745ms
+2016/01/08 10:10:15.365485 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000051] Started POST "/content/new" from [::1]:52987
+2016/01/08 10:10:15.391675 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000051] Returning 301 in 18.733911ms
+2016/01/08 10:10:15.393429 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000052] Started GET "/content/index" from [::1]:52987
+2016/01/08 10:10:15.394831 [Kenta-no-MacBook-Pro.local/6F1X8DIJPe-000052] Returning 200 in 1.38009ms

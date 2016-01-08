@@ -12,5 +12,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	db.CreateTable(&models.User{})
+	db.CreateTable(&models.Content{})
 }

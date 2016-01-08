@@ -5,21 +5,50 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"github.com/zenazn/goji/web"
+	"gopkg.in/yaml.v2"
 	"html/template"
+	"io/ioutil"
 	"models"
 	"net/http"
 	"strconv"
 	"strings"
+	"time"
 )
-
-const Password string = "content:content"
 
 var tpl *template.Template
 var db gorm.DB
+var db_pass string
+var bauth_string string
 
 type FormData struct {
 	Content models.Content
 	Mess    string
+}
+
+func init() {
+	buf, err := ioutil.ReadFile("config.yml")
+	if err != nil {
+		return
+	}
+
+	m := make(map[interface{}]interface{})
+	err = yaml.Unmarshal(buf, &m)
+	if err != nil {
+		panic(err)
+	}
+
+	db_pass = m["db_password"].(string)
+	println(db_pass)
+	con := "root:" + db_pass + "@/gorm?charset=utf8&parseTime=True"
+	println(con)
+	bauth_string = m["bauth_string"].(string)
+	db, _ = gorm.Open("mysql", con)
+
+	loc, err := time.LoadLocation("Asia/Tokyo")
+	if err != nil {
+		loc = time.FixedZone("Asia/Tokyo", 9*60*60)
+	}
+	time.Local = loc
 }
 
 func ContentIndex(c web.C, w http.ResponseWriter, r *http.Request) {
@@ -73,7 +102,7 @@ func SuperSecure(c *web.C, h http.Handler) http.Handler {
 		}
 
 		password, err := base64.StdEncoding.DecodeString(auth[6:])
-		if err != nil || string(password) != Password {
+		if err != nil || string(password) != bauth_string {
 			pleaseAuth(w)
 			return
 		}
@@ -87,8 +116,4 @@ func pleaseAuth(w http.ResponseWriter) {
 	w.Header().Set("WWW-Authenticate", `Basic realm="Gritter"`)
 	w.WriteHeader(http.StatusUnauthorized)
 	w.Write([]byte("Go away!\n"))
-}
-
-func init() {
-	db, _ = gorm.Open("mysql", "root@/gorm?charset=utf8&parseTime=True")
 }

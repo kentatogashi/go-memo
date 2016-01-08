@@ -1,12 +1,17 @@
+<script type='text/javascript'>
+  function ShowLength(str) {
+    document.getElementById("inputlength").innerHTML = str.length + " count";
+  }
+</script>
 <html>
-  <form method="post" action="/content/update/{{.Content.Id}}" >
-    <label>
-      Name
-      <textarea name="Content" value="" cols=100 rows=100 />{{.Content.Name}}</textarea>
-    </label>
-    <input type="submit" name="Submit" value="更新" /><br/>
-    <a href="/content/delete/{{.Content.Id}}">delete</a>
-  </form>
-  {{.Mess}}<br/>
+  <p id="inputlength"></p>
   <a href="/content/index">back</a>
+    <a href="/content/delete/{{.Content.Id}}">delete</a>
+  <form method="post" action="/content/update/{{.Content.Id}}" >
+    <input type="submit" name="Submit" value="更新" /><br/>
+    <label>
+     Content 
+      <textarea name="Content" cols=100 rows=100 onkeyup="ShowLength(value);" />{{.Content.Content}}</textarea>
+    </label>
+  </form>
 </html>
