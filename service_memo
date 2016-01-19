@@ -1,0 +1,67 @@
+#!/bin/bash
+
+set -e
+
+PID_FILE=./memo.pid
+LOG=./memo.log
+
+help() {
+  echo "usage: $0 [start|stop|restart]"
+  exit 1
+}
+
+start() {
+  echo "Starting memo..."
+  if [ -f $PID_FILE ]; then
+    echo "already started"
+    return
+  fi
+  nohup go run main.go content_controller.go > $LOG &
+  if [ $? -eq 0 ]; then
+    sleep 3
+    GO_PS_LINE=`ps -eo ppid,pid,comm | grep "go-build"`
+    if [ $? -ne 0 ]; then
+      echo "cannot get ppids"
+      return
+    fi
+    PPIDS=`echo $GO_PS_LINE | awk '{print $1, $2}'`
+    echo "$PPIDS is called."
+    echo $PPIDS > $PID_FILE
+    echo "Started memo."
+  else
+    echo "error"
+  fi
+}
+
+stop() {
+  echo "Stopping $OLD_PID..."
+  if [ ! -f $PID_FILE -o -z $PID_FILE ]; then
+    echo "already stopped"
+    rm -f $PID_FILE
+    return
+  fi
+  OLD_PPIDS=`cat $PID_FILE`
+  kill $OLD_PPIDS
+  if [ $? -eq 0 ]; then
+    echo "Stopped $OLD_PPIDS"
+    rm $PID_FILE
+  else 
+    echo "error"
+  fi
+}
+
+restart() {
+  stop
+  start 
+}
+
+if [ $# -ne 1 ]; then
+  help
+fi
+
+case $1 in
+  start ) start ;;
+  stop ) stop ;;
+  restart ) restart;;
+  * ) help ;;
+esac
