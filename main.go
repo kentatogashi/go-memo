@@ -7,7 +7,7 @@ import (
 	"github.com/zenazn/goji/web/middleware"
 )
 
-func main() {
+func Route(m *web.Mux) {
 	content := web.New()
 	goji.Handle("/content/*", content)
 	content.Use(middleware.SubRouter)
@@ -18,5 +18,9 @@ func main() {
 	content.Get("/edit/:id", ContentEdit)
 	content.Post("/update/:id", ContentUpdate)
 	content.Get("/delete/:id", ContentDelete)
+}
+
+func main() {
+	Route(goji.DefaultMux)
 	goji.Serve()
 }

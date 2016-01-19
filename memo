@@ -2,8 +2,8 @@
 
 set -e
 
-PID_FILE=./memo.pid
-LOG=./memo.log
+PID_FILE=./tmp/memo.pid
+LOG=./tmp/memo.log
 
 help() {
   echo "usage: $0 [start|stop|restart]"
@@ -18,7 +18,7 @@ start() {
   fi
   nohup go run main.go content_controller.go > $LOG &
   if [ $? -eq 0 ]; then
-    sleep 3
+    sleep 1
     GO_PS_LINE=`ps -eo ppid,pid,comm | grep "go-build"`
     if [ $? -ne 0 ]; then
       echo "cannot get ppids"
