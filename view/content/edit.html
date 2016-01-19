@@ -10,7 +10,6 @@
   <form method="post" action="/content/update/{{.Content.Id}}" >
     <input type="submit" name="Submit" value="更新" /><br/>
     <label>
-     Content 
       <textarea name="Content" cols=100 rows=100 onkeyup="ShowLength(value);" />{{.Content.Content}}</textarea>
     </label>
   </form>

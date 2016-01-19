@@ -4,23 +4,24 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/zenazn/goji"
 	"github.com/zenazn/goji/web"
-	"github.com/zenazn/goji/web/middleware"
 )
 
-func Route(m *web.Mux) {
-	content := web.New()
-	goji.Handle("/content/*", content)
-	content.Use(middleware.SubRouter)
-	content.Use(SuperSecure)
-	content.Get("/index", ContentIndex)
-	content.Get("/new", ContentNew)
-	content.Post("/new", ContentCreate)
-	content.Get("/edit/:id", ContentEdit)
-	content.Post("/update/:id", ContentUpdate)
-	content.Get("/delete/:id", ContentDelete)
+func RootRouter(m *web.Mux) {
+	m.Get("/", Root)
+}
+
+func ContentRouter(m *web.Mux) {
+	m.Get("/content/", ContentIndex)
+	m.Get("/content/index", ContentIndex)
+	m.Get("/content/new", ContentNew)
+	m.Post("/content/new", ContentCreate)
+	m.Get("/content/edit/:id", ContentEdit)
+	m.Post("/content/update/:id", ContentUpdate)
+	m.Get("/content/delete/:id", ContentDelete)
 }
 
 func main() {
-	Route(goji.DefaultMux)
+	RootRouter(goji.DefaultMux)
+	ContentRouter(goji.DefaultMux)
 	goji.Serve()
 }

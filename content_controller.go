@@ -38,9 +38,7 @@ func init() {
 	}
 
 	db_pass = m["db_password"].(string)
-	println(db_pass)
 	con := "root:" + db_pass + "@/gorm?charset=utf8&parseTime=True"
-	println(con)
 	bauth_string = m["bauth_string"].(string)
 	db, _ = gorm.Open("mysql", con)
 
@@ -49,6 +47,12 @@ func init() {
 		loc = time.FixedZone("Asia/Tokyo", 9*60*60)
 	}
 	time.Local = loc
+}
+
+func Root(c web.C, w http.ResponseWriter, r *http.Request) {
+	Contents := []models.Content{}
+	tpl = template.Must(template.ParseFiles("view/index.html"))
+	tpl.Execute(w, Contents)
 }
 
 func ContentIndex(c web.C, w http.ResponseWriter, r *http.Request) {
@@ -93,27 +97,27 @@ func ContentDelete(c web.C, w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/content/index", 301)
 }
 
-func SuperSecure(c *web.C, h http.Handler) http.Handler {
-	fn := func(w http.ResponseWriter, r *http.Request) {
-		auth := r.Header.Get("Authorization")
-		if !strings.HasPrefix(auth, "Basic ") {
-			pleaseAuth(w)
-			return
-		}
-
-		password, err := base64.StdEncoding.DecodeString(auth[6:])
-		if err != nil || string(password) != bauth_string {
-			pleaseAuth(w)
-			return
-		}
-
-		h.ServeHTTP(w, r)
-	}
-	return http.HandlerFunc(fn)
-}
-
-func pleaseAuth(w http.ResponseWriter) {
-	w.Header().Set("WWW-Authenticate", `Basic realm="Gritter"`)
-	w.WriteHeader(http.StatusUnauthorized)
-	w.Write([]byte("Go away!\n"))
-}
+//func SuperSecure(c *web.C, h http.Handler) http.Handler {
+//	fn := func(w http.ResponseWriter, r *http.Request) {
+//		auth := r.Header.Get("Authorization")
+//		if !strings.HasPrefix(auth, "Basic ") {
+//			pleaseAuth(w)
+//			return
+//		}
+//
+//		password, err := base64.StdEncoding.DecodeString(auth[6:])
+//		if err != nil || string(password) != bauth_string {
+//			pleaseAuth(w)
+//			return
+//		}
+//
+//		h.ServeHTTP(w, r)
+//	}
+//	return http.HandlerFunc(fn)
+//}
+//
+//func pleaseAuth(w http.ResponseWriter) {
+//	w.Header().Set("WWW-Authenticate", `Basic realm="Gritter"`)
+//	w.WriteHeader(http.StatusUnauthorized)
+//	w.Write([]byte("Go away!\n"))
+//}
